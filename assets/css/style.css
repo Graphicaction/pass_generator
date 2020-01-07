@@ -1,0 +1,57 @@
+/* Global and index page style setting goes down  */
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* For header of all the pages: */
+.heading {
+    
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    color: #444444;
+    padding: 0.5rem;
+}
+
+/* setting body width to 960px */
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background: #ffffff;
+    color: #777777;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    padding-bottom: 20px;
+    padding: 0.5rem;
+    box-shadow: #777777;
+}
+.main{
+   background-color: #f8f8f8;
+   padding: 1rem;
+   width: 960px;
+   margin: 0 auto;
+}
+form {
+    padding: 1.5rem;
+}
+
+h2 {  
+    padding: 0.5rem;
+}
+.textArea {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+#formTextarea {
+    border: 0.15rem dashed #dddddd;
+}
+     
+.btn {
+    background-color: #cc0000 !important;
+    border-radius: 1.3rem !important;
+    color: #ffffff !important;
+}

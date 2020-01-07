@@ -10,33 +10,36 @@
     </head>
 
     <body>
-        <header>
-            Password Generator
-        </header>
-        <div class="container">
-            <form>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Example textarea</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                
-                <div class="row">
-                    <div class="col-8">
-                        <div class="px-3">
-                            <button type="button" class="btn btn-primary btn-lg">Generate Password</button>
+        <section class="main">
+            <div class="heading text-center">
+                <h1>Password Generator</h1>
+            </div>
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                      <label class="h2" for="FormControlTextarea">Generate a password</label>
+                      <div class="textArea">
+                        <textarea class="form-control text-center" rows="5" id="formTextarea" rows="3" placeholder="Your secure password"></textarea>
+                      </div>
+                      
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="px-5">
+                                <button type="button" class="btn btn-lg" onclick="generate()">Generate Password</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4">
-                         <div class=""> 
-                            <button type="button" class="btn btn-secondary btn-lg"  onclick="myFunction()">Copy to Clipboard!</button>
-                         </div> 
-                    </div>
-                </div> 
-            </form>
-        </div>
-        
-    
-    
+                        <div class="col-4">
+                             <div class="px-4"> 
+                                <button type="button" id="copyBtn" class="btn btn-lg" onclick="myFunction()" disabled>Copy to Clipboard!</button>
+                             </div> 
+                        </div>
+                    </div> 
+                </form>
+            </div>
+        </section>
+            
     <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
      
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
