@@ -6,10 +6,11 @@ function getPassword(len, charset) {
   return password;
 }
 
-function generate() {
+function validateInput() {
   var length = prompt("Enter the length of the password:");
-   while(length && (length < 8 || length > 128)) {
-    alert("Please enter password length between 8 and 128!");
+  
+   while(isNaN(length) || length < 8 || length > 128) {
+    alert("Please enter valid password length between 8 and 128!");
     length = prompt("Enter the length of the password:");
   }
   var specialChar = confirm("Do you want special charaters in your password?");
