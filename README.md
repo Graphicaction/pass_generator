@@ -12,6 +12,9 @@ The code editor used here is VScode. Version controller is Github.
     - **Character Type**: What kind of characters(special, number, lowercase or uppercase) user wants in the password .
 Also one can copy the password to the clipboard.
 
+## Deployed link:
+[a link] (https://graphicaction.github.io/pass_generator/)
+
 ![ScreenShot](assets/images/screen1.png "Password Generator")
 
 ## Credits:
