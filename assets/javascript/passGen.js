@@ -1,3 +1,5 @@
+
+// Function to generate password from a character set available
 function getPassword(len, charset) {
   var password = "";
   for(var i = 0; i < len; i++) {
@@ -6,13 +8,24 @@ function getPassword(len, charset) {
   return password;
 }
 
+// Function called from 'Generate Password' click event to validate and get input from user
+
 function validateInput() {
-  var length = prompt("Enter the length of the password:");
+  let textValue = document.getElementById("formTextarea").value = "";
   
-   while(isNaN(length) || length < 8 || length > 128) {
-    alert("Please enter valid password length between 8 and 128!");
-    length = prompt("Enter the length of the password:");
+  var length = prompt("Enter the length of the password:");
+ 
+  if(length == null) {
+    alert("Exiting!");
+    return;
+  } else {
+    while(isNaN(length) || length < 8 || length > 128) {
+      alert("Please enter valid password length between 8 and 128!");
+      length = prompt("Enter the length of the password:");
+    }
   }
+  //Asking for 'Character Type' and validating if atleast one is selected
+
   var specialChar = confirm("Do you want special charaters in your password?");
   var numericChar = confirm("Do you want numbers in your password?");
   var lowerChar = confirm("Do you want lowercase charaters in your password?");
@@ -25,12 +38,16 @@ function validateInput() {
      upperChar = confirm("Do you want uppercase charaters in your password?");
   }
   
+  //Calling functions to generate array of character type and generate password
+
   var charSet = getCharset(specialChar, numericChar,lowerChar, upperChar);
   var generatedPass = getPassword(length, charSet);
 
   document.getElementById("copyBtn").disabled = false;
   document.getElementById("formTextarea").value = generatedPass;
 }
+
+// This function is generating an array of character type selected
 
 function getCharset(speChar, numChar, lChar, uChar) {
   const lowerChars = 'abcdefghijklmnopqrstuvwxyz';
@@ -60,6 +77,12 @@ function myFunction() {
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    alert("Copied the text: " + copyText.value);
-  }
+    document.getElementById("copyBtn").disabled = true;
+    setTimeout(function() { 
+      alert("Copied the text: " + copyText.value);
+   }, 0);
+   
+}
+
+
 
